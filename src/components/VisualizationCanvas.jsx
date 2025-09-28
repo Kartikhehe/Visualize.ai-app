@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './VisualizationCanvas.css'; // You can create this file for styling the controls
 
-// ✅ NEW HELPER FUNCTION FOR THE LOADING ANIMATION
+
 const drawLoadingAnimation = (ctx, currentTime) => {
   const { width, height } = ctx.canvas;
   const centerX = width / 2;
@@ -170,6 +170,12 @@ const VisualizationCanvas = ({ visualization, isLoading }) => {
           ctx.strokeStyle = color;
           ctx.lineWidth = 2;
           ctx.stroke();
+        } else if (layer.type === 'rectangle') {
+          ctx.fillStyle = props.fill;
+          ctx.fillRect(props.x, props.y, props.width, props.height);
+        } else if (layer.type === 'square') {
+          ctx.fillStyle = props.fill;
+          ctx.fillRect(props.x, props.y, props.size, props.size);
         }
       ctx.globalAlpha = 1;
     });
