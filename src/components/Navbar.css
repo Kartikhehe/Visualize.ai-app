@@ -1,0 +1,56 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    height: 60px;
+    box-sizing: border-box;
+  }
+  
+  .navbar-brand h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* ✅ ADD SPACING BETWEEN BUTTONS */
+  }
+  
+  /* ✅ GENERAL STYLING FOR BOTH <A> AND <BUTTON> ELEMENTS */
+  .navbar-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    border: none; /* For button element */
+    cursor: pointer; /* For button element */
+    font-family: inherit; /* For button element */
+    font-size: 0.9rem; /* For button element */
+  }
+  
+  .navbar-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* ✅ SPECIFIC STYLING FOR THE NEW CHAT BUTTON */
+  .new-chat-button {
+    background-color: #6c757d; /* A different color */
+  }
+  
+  .new-chat-button:hover {
+    background-color: #5a6268;
+  }

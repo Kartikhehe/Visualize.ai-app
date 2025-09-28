@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f7f9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  
+  /* --- Key Change for Fixed Navbar --- */
+  padding-top: 60px; /* This MUST match the navbar's height */
+  box-sizing: border-box; /* This makes padding part of the 100vh height */
+  /* --- End of Key Change --- */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.visualization-container {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 2rem;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+}
+
+.placeholder {
+  color: #999;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  overflow: hidden; /* Important for the child to scroll properly */
+}
+
+/* ChatPanel.css */
+.chat-panel {
+  flex-grow: 1; /* This makes the chat history take all available space */
+  overflow-y: auto; /* The chat history itself will scroll if needed */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  max-width: 80%;
+  padding: 10px 15px;
+  border-radius: 18px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.question {
+  background-color: #007bff;
   color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.answer {
+  background-color: #e9e9eb;
+  color: #333;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loading {
+  font-style: italic;
+  color: #888;
+}
+
+/* QuestionInput.css */
+.question-input-form {
+  display: flex;
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  flex-shrink: 0; /* Prevents the input from shrinking */
+}
+
+.question-input-form input {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.question-input-form button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.question-input-form button:hover {
+  background-color: #0056b3;
 }
