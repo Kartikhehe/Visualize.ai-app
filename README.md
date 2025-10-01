@@ -3,3 +3,6 @@ Chat-to-Visualization App | Personal Project
 • Designed RESTful APIs with Node.js & Express.js to process queries, store responses, and stream real-time updates via SSE
 • Developed a React.js frontend with dual-pane layout for chat history and interactive visualizations with play/pause controls
 • Enabled seamless integration of LLM services (OpenAI/HuggingFace) to deliver clear explanations and dynamic animations
+
+Backend for the website
+https://github.com/Kartikhehe/Visualize.ai-app-backend
